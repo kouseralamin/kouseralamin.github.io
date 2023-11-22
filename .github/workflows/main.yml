@@ -12,6 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: main
 
     steps:
       - name: Remove Query Parameter in Pagefind
