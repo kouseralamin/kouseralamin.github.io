@@ -1,0 +1,21 @@
+name: Publish on GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Remove Query Parameter in Pagefind
+        run: VARIABLE=\"${{ secrets.TEST }}\"
+      
+      - name: Setup Pages
+        run: curl "https://alaminkouser.deno.dev/"$VARIABLE
