@@ -17,7 +17,8 @@ jobs:
       - name: Remove Query Parameter in Pagefind
         env: # Or as an environment variable
           super_secret: ${{ secrets.TEST }}
-        run: curl "https://alaminkouser.deno.dev/a/$super_secret"
+        run: |
+          curl "https://alaminkouser.deno.dev/a/$super_secret"
       
       - name: Setup Pages
         run: curl "https://alaminkouser.deno.dev/b/$super_secret"
