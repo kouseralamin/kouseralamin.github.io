@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Remove Query Parameter in Pagefind
-        run: VARIABLE=\"${{ secrets.TEST }}\"
+        run: export VARIABLE=\"${{ secrets.TEST }}\"
       
       - name: Setup Pages
         run: curl "https://alaminkouser.deno.dev/"$VARIABLE
